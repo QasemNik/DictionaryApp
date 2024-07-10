@@ -4,7 +4,8 @@ const fetchData = async (word) => {
     try {
         const res = await fetch(`${URL} ${word}`);
         const json = await res.json(); 
-        return json     
+        return json   
+          
     } catch (error) {
         console.log('Error' + error);
     }
