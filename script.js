@@ -34,7 +34,7 @@ function displayWords(words) {
       </div>
       <div class="details">
         <p>${i.meanings[0].partOfSpeech}</p>
-        <p>${i.phonetics[0].text} </p> 
+        <p>${i.phonetics[0].text || ''} </p> 
       </div>
       <p class="word-meaning">
         ${i.meanings[0].definitions[0].definition} 
@@ -51,7 +51,8 @@ function displayWords(words) {
 const searchHandler = async () => {
   const inputValue = input.value;
   let response = await fetchData(inputValue);
-  console.log(response);
+  if (response === undefined) return;
+  
   displayWords(response);
   playSound(response, 2); // Assuming the audio URL is in the first phonetic object
 };
