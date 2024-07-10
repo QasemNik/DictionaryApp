@@ -13,7 +13,6 @@ const fetchData = async (word) => {
         }
     } catch (error) {
         swal('Error',"Something went wrong" , "error");
-        ;
     }
 }
 
