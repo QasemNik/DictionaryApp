@@ -82,13 +82,3 @@ body {
     margin-top: 80px;
     text-align: center;
 }
-#sound{
-    cursor: pointer;
-
-}
-.btn{
-    position: absolute;
-    right: 0;
-    left: 120;
-    top:0;
-}
